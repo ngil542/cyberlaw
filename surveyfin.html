@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	body{
+
+        background-color: rgb(230, 245, 227);
+    }
+	label{
+        font-weight: bold;
+    }
+    #feedbacklabel {
+    	display:  block; 
+    }
+	#information {
+		font-weight: lighter;
+	}
+</style>
+
+<body>
+<h1 id="title">Survey Form</h1> <!--User Story #1-->
+<p id="description">This is a Survey to aid in determining if the current laws for today's cyberstalking is enough to protect the general public.</p><!--User Story #2-->
+<p id="more-info">In the State of Washington, Cyberstalking laws are not really tough enough. Please review this petition and help us make a better future together. Thank you.</p>
+<br>
+
+	<h2>Current Cyberstalking Laws in Washington state:
+		RCW 9.61.260
+		Key Issues:</h2>
+        <p>Penalties are not hard enough. Current Cyberstalking penalties are a gross misdemeanor unless "the perpetrator has previously been convicted of the crime of harassment as defined in RCW 9A.46.060, with the same victim or a member of the victim's family or household." It is very difficult to prove and catch the criminals at large because criminals are more likely to attack multiple platforms, for example: not just eaves-dropping on a PC, but also their cell phone, other home devices that utilize bluetooth, and/or IoT. To report this crime just once involves proof and knowing how to deal with it. It is not only harassment but something that can lead to extreme privacy violations when theft is really the target. It is not simply harassment it is stealing access to credit, credit cards, reputation, and even job or loss of life. It more than likely leads to identity theft or fraud. Crime rings are formed and combine efforts to stalk and steal. More simply stated, this form of stalking is dangerous and crosses over many legal boundaries. It is a danger to our economy, and a danger to society, which will eventually tear our country apart. To think that just one person is out there stalking or stealing, and capable of multiplatform stalking is impossible to find and convict. Internet Service Providers and cell phone distribution centers are a primary target and would be the most likely source to look into. One cannot even trust that their router is connected to a trusted source or even the cellular phone connected to a service one paid for. Stalking of any kind in today's climate crosses over all boundaries. With this in mind, please consider supporting updating and revising this law to include a more serious conviction for the first time offender. Imposing longer sentences and fines to keep these offenders out of the general public and to think about the consequences.
+	</p>
+	<br>
+    <form id="survey-form">
+	
+        <label for="name">Name:</label>
+        <input type="text" id="name" required placeholder="Enter First and Last Name"></input><!--User Story #4-->
+        
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" input pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" required placeholder="Enter Email"></input><!--User Story #5--><!--User Story #6, regex line for validating emails, required: used for ensuring input-->
+        
+        
+        <label for="number">Age:</label>
+        <input type="number" min="18" max="100" id="number" required placeholder="Age"></input><!--User Story #7, #8 non-numbers cannot be entered type=number, #9 -->
+        
+    	<label for="county">Select Your County:</label>
+    	  
+    	<select name="location-names" id="location-names">
+    	<option dropdown="island">Island</option>
+    	<option value="king">King</option>
+    	<option value="kitsap">Kitsap</option>
+    	<option value="pierce">Pierce</option>
+    	<option value="san-juan">San Juan</option>
+    	<option value="skagit">Skagit</option>
+    	<option value="snohomish">Snohomish</option>
+    	<option value="whatcom">Whatcom</option>
+    	</select> <!--User Story #12, create a dropdown menu select-->
+    	<br>
+        
+      
+	<!--User Story #13, choice for update and revise current laws, keep existing laws, or add law enforcement task force for faster solutions involving cyberstalking, grouped by choice-->
+	<h3>Please Make a Selection:</h3>
+	<input type="radio" name="choice" value="Keep existing laws">Keep existing laws<br>
+	<input type="radio" name="choice" value="Update and Revise Current Cyberstalking Laws">Update and revise current cyberstalking laws to include a harder sentence<br>
+	<input type="radio" name="choice" value="Add task force to local law enforcement">Add task force to local law enforcement for faster response to area cyberstalking<br>
+
+	<!--User Story #14, select from checkboxes, choose to receive future information-->
+	<h4>For More Information Regarding This Petition: </h4>
+	<label for="information" id="information">
+		<input id="information" value="information" type="checkbox" name="make selection1">Please send more info by email</label></input>
+	<label for="information" id="information">
+		<input id="information" value="information" type="checkbox" name="make selection2">Please do not send information</label></input>
+		<br><br><br>
+
+	<!--User Story #15, textarea for petitioner feedback-->
+	<label id="feedbacklabel">Please Provide Your Feedback Here: </label>
+	<textarea id="feedback" name="feedback" rows="10" cols="40">
+	</textarea>
+  <br><br><br>
+	<!--User Story #16-->
+	<input type="submit" value="Submit Form"><br><br>
+    
+</form><!--User Story #3, #10 add labels, #11 placeholders added-->
+<footer>2022 Page by N.Gilmore</footer>
+</body>
+
+</html>
